@@ -67,11 +67,13 @@ func main() {
 
 func lissajous(out io.Writer, values url.Values) {
 	// default values
-	var cycles = 5.0
-	var res = 0.001
-	var size = 100.0
-	var nframes = 64
-	var delay = 8
+	var (
+		cycles  = 5.0
+		res     = 0.001
+		size    = 100.0
+		nframes = 64
+		delay   = 8
+	)
 	// for each param given, set the value, if there is an error, stay with the default
 	for key, val := range values {
 		switch key {
